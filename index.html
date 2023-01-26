@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disappear</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <h2 class="letter">If You Touch Any Letter It Will Disapper Like Magic....
+        </h2>
+    </section>
+    <script>
+        // Split Text into letters
+        const letter = document.querySelector('.letter');
+        letter.innerHTML = letter.textContent.replace(/\S/g,"<span>$&</span>");
+
+        //add active class on (span) tag
+        const letters = document.querySelectorAll('span');
+        for (let i=0; i<letters.length; i++){
+            letters[i].addEventListener("mouseover",function
+            (){
+                letters[i].classList.add('active') 
+            })
+        }
+    </script>
+</body>
+</html>
